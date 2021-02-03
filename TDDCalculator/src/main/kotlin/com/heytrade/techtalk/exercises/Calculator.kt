@@ -2,6 +2,10 @@ package com.heytrade.techtalk.exercises
 
 class Calculator {
     fun parse(s: String): Int {
-        return 0 // is a constant
+        val(a, op, b)= s.split(" ")
+        return when (op) {
+            "*" ->a.toInt() * b.toInt()
+            else -> throw IllegalArgumentException("invalid operator")
+        }
     }
 }
